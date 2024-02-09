@@ -33,6 +33,8 @@ app.get("/", (req, res) => {
 
 // Vo GET baranje mozeme da imame i query i parametar
 
+//get user by surname
+
 app.get("/users", getAllUsers);
 app.get("/users/:id", getOneUser);
 app.get("/users/sorted", getSortedByName);

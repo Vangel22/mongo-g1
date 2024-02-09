@@ -7,6 +7,8 @@ const {
   remove,
 } = require("../models/user");
 
+//get user by surname
+
 const getAllUsers = async (req, res) => {
   try {
     const users = await getAll();
