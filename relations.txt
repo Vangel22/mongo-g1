@@ -1,0 +1,16 @@
+// const User = {
+//   _id: ObjectId
+//   age: Number,
+//   car: [String], //ObjectId
+//   bestFriend: [String] //ObjectId -> cuvame ids od drugi korisnici
+// };
+
+// const Car = {
+//   user: String, //ObjectId
+// };
+
+// foreign key -> relational dbs
+
+
+// deleteOne
+// <collection>.deleteOne({  })
