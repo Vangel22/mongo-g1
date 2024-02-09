@@ -91,6 +91,8 @@ const remove = async (id) => {
   return await User.deleteOne({ _id: id });
 };
 
+//get user by surname
+
 module.exports = {
   create,
   getById,
