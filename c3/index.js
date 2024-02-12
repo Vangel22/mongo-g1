@@ -1,3 +1,4 @@
+// Infrastructure code
 const express = require("express");
 const {
   getAllUsers,
@@ -24,7 +25,7 @@ require("./db/config");
 
 const app = express();
 
-// middleware
+// middleware - posrednik - pred, za i potoa
 app.use(express.json());
 
 app.get("/", (req, res) => {
@@ -36,9 +37,9 @@ app.get("/", (req, res) => {
 //get user by surname
 
 app.get("/users", getAllUsers);
-app.get("/users/:id", getOneUser);
+app.get("/users/:id", getOneUser); // req.params.id
 app.get("/users/sorted", getSortedByName);
-app.get("/users/:email", getUserByEmail);
+app.get("/users/:email", getUserByEmail); // req.params.email, ovde ima greska
 app.post("/users", createUser);
 app.put("/users/:id", updateUser);
 app.delete("/users/:id", removeUser);

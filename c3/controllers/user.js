@@ -9,13 +9,24 @@ const {
 
 //get user by surname
 
+// localhost:3000/users -> sme ja kliknale
+// vo index imam definirano /users ruta so GET method koj ja povikuva
+// getAllUsers funkcijata vo kontrolerot
+// getAllUsers funkcijata ja povikuva funkcijata getAll vo modelot
+
+// fullfiled, pending, rejected
+// Promise((resolve, reject) => { if(greska) reject() else resolve()})
+
+// resolve === try
+// reject === catch
+
 const getAllUsers = async (req, res) => {
   try {
     const users = await getAll();
-    res.status(200).send(users);
+    res.status(200).send(users); //ovde zavrsuva baranjeto
   } catch (err) {
     console.log(err);
-    res.status(500).send("Internal Server Error!");
+    res.status(500).send("Internal Server Error!"); // a dokolku ima greska zavrsuva ovde
   }
 };
 

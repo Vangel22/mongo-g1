@@ -78,8 +78,17 @@ const getAllSortedByName = async () => {
 };
 
 const getAll = async () => {
-  return await User.find({});
+  return await User.find({}); // ke ni gi vrati site korisnici
+  // ako ova uspee ke ni vrati korisnici nazad vo kontrolerot na linija 26 - ke postojat users
+  // ako ne uspee ke vrati greska i istata ke bide fatena vo kodot na linija 28
   //db.users.find({})
+
+  // psevdo kod -> test
+  // return Promise((resolve, reject) => {
+  //   const users = User.find({}); // User.find vrakja promise
+  //   if (users) resolve();
+  //   else reject();
+  // });
 };
 
 //data e ustvari req.body
